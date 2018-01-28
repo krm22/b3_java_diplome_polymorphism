@@ -19,5 +19,7 @@
    chacune positionnée par une méthode.
 
 * Modifiez le système existant pour prendre en compte ces modifications.
-Ajoutez la méthode afficherDetailDesNotes dans la classe Diplome pour afficher la liste des notes et l’appréciation. 
-On utilisera le polymorphisme pour réaliser cette nouvelle fonctionnalité.
+
+* Ajoutez la méthode afficherDetailDesNotes dans la classe Diplome pour afficher la liste des notes et l’appréciation. 
+
+* On utilisera le polymorphisme pour réaliser cette nouvelle fonctionnalité.
