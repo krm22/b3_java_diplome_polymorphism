@@ -9,7 +9,6 @@ public class QCM extends Examen {
 	public QCM(int numOfQuestions) {
 	    this.numOfQuestions = numOfQuestions;
 	}
-
 	
 	public void setResponsesCorrecte(int nbReponsesCorrectes) {
 		this.nbReponsesCorrectes = nbReponsesCorrectes;
@@ -17,7 +16,21 @@ public class QCM extends Examen {
 	}
 	
 	private void computeNote(){
-		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * (double)bareme;
+		 this.note = (double)this.nbReponsesCorrectes / (double)this.numOfQuestions * bareme;
+		 setApprieciationNote(this.note);
 	}
+	
+	public void setApprieciationNote(double note) 
+	{
+	     if (note < 8 ) {
+	       this.apprieciation = " QCM : insufficient";
+	        } else if ( note >= 8 && note <= 12 ){
+	        this.apprieciation =  " QCM : passable ";  
+	        } else if ( note >= 12 && note <= 15 ){
+	           this.apprieciation =    " QCM : good ";   
+	         } else {
+	               this.apprieciation =  " QCM : very good ";  
+	          }
+	       }
 
 }

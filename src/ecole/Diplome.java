@@ -26,6 +26,15 @@ public class Diplome {
 	public boolean isValide() {
 		return (this.calcMoyen() >= 10) ? true : false; 	
 	}
+	
+	public void displayDetailDesNotes(){
+		for(Examen exam : examens){
+		System.out.println(exam.getApprieciationNote());	
+		System.out.println(exam.getNote());
+		}
+	}
+	
+	
 
 	public static void main(String[] args) {
 			Diplome d = new Diplome();
@@ -33,14 +42,21 @@ public class Diplome {
 			Project p = new Project();
 			QCM qcm = new QCM(20); 
 			
-			
 			qcm.setResponsesCorrecte(10);
 			e.setNote(10);
-			p.setNote(5, 5);
-			
+		    p.setNote(5, 5);
+			e.getNote();
 			d.addExamen(e);
 			d.addExamen(p);
 			d.addExamen(qcm);
-			System.out.println(d.isValide());
+			
+			//System.out.println(d.isValide());
+			
+			d.displayDetailDesNotes();
+			
   }
+	
+	
+	
+	
 }
